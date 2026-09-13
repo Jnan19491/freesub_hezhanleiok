@@ -6,17 +6,6 @@
     {
       "type": "vless",
       "tag": "🇹🇷 土耳其 (Turkey) 01 - xiaohe",
-      "server": "185.87.24.2",
-      "server_port": 2085,
-      "uuid": "a1d1b142-17c5-4472-99de-df220df4d4fb",
-      "transport": {
-        "type": "grpc",
-        "service_name": "vless"
-      }
-    },
-    {
-      "type": "vless",
-      "tag": "🇹🇷 土耳其 (Turkey) 02 - xiaohe",
       "server": "156.67.63.231",
       "server_port": 443,
       "uuid": "b052df40-d51c-456c-9bd6-57af01a87e4e",
@@ -37,26 +26,35 @@
     },
     {
       "type": "vless",
-      "tag": "🇹🇷 土耳其 (Turkey) 03 - xiaohe",
-      "server": "162.159.91.222",
-      "server_port": 443,
-      "uuid": "50414e45-4c5f-5a45-5553-723a643df685",
+      "tag": "🇹🇷 土耳其 (Turkey) 02 - xiaohe",
+      "server": "170.168.97.8",
+      "server_port": 8443,
+      "uuid": "4350213a-b4e7-262a-0bd7-bd16957cf71a",
       "tls": {
         "enabled": true,
-        "server_name": "n3zaxce7u0es.crzl48eiuses.workers.dev",
-        "insecure": false,
+        "server_name": "download.nvidia.com",
         "utls": {
           "enabled": true,
           "fingerprint": "chrome"
+        },
+        "reality": {
+          "enabled": true,
+          "public_key": "D2SXHZRRYM0WcFChGWd57XB-U73aIsGfMpe2-Gq5XSs",
+          "short_id": ""
         }
       },
       "transport": {
-        "type": "ws",
-        "path": "/stream/PANEL_ZEUS/723a643df685/loc-0",
-        "headers": {
-          "Host": "n3zaxce7u0es.crzl48eiuses.workers.dev"
-        }
+        "type": "grpc",
+        "service_name": "TunService"
       }
+    },
+    {
+      "type": "shadowsocks",
+      "tag": "🇹🇷 土耳其 (Turkey) 03 - xiaohe",
+      "server": "188.132.174.236",
+      "server_port": 1080,
+      "method": "chacha20-ietf-poly1305",
+      "password": "rSeYcig_XBy8q3k33NpK3A"
     },
     {
       "type": "selector",
