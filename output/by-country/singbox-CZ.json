@@ -1,0 +1,96 @@
+{
+  "log": {
+    "level": "warn"
+  },
+  "outbounds": [
+    {
+      "type": "vless",
+      "tag": "🇨🇿 捷克 (Czech) 01 - xiaohe",
+      "server": "172.67.141.75",
+      "server_port": 443,
+      "uuid": "de78c0b1-c5c8-412a-bd92-430d1f2e2642",
+      "tls": {
+        "enabled": true,
+        "server_name": "FroSTy-PonD-7436.SHHabbYAt914.woRkErS.dEv",
+        "insecure": false,
+        "alpn": [
+          "http/1.1"
+        ],
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        }
+      },
+      "transport": {
+        "type": "ws",
+        "path": "/NmrU9ImDG7jA7oFEem",
+        "headers": {
+          "Host": "frosty-pond-7436.shhabbyat914.workers.dev"
+        }
+      }
+    },
+    {
+      "type": "vless",
+      "tag": "🇨🇿 捷克 (Czech) 02 - xiaohe",
+      "server": "188.114.97.6",
+      "server_port": 8080,
+      "uuid": "0836463b-214f-4af6-aa85-85a56a62388e",
+      "transport": {
+        "type": "ws",
+        "path": "/8eaZJhRwB5zzDy81",
+        "headers": {
+          "Host": "d2127a49-flat-wood-c4b5.milia-akbarpoor.workers.dev"
+        }
+      }
+    },
+    {
+      "type": "vless",
+      "tag": "🇨🇿 捷克 (Czech) 03 - xiaohe",
+      "server": "fast.news.gazette.help",
+      "server_port": 443,
+      "uuid": "a435200f-b7e8-4994-b0e8-93744c260d42",
+      "flow": "xtls-rprx-vision",
+      "tls": {
+        "enabled": true,
+        "server_name": "cz.h2.cleanersaz.help",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "safari"
+        },
+        "reality": {
+          "enabled": true,
+          "public_key": "0FScwLVFXdFyt3PN0vI5sDxlHupfts4ZI1wIy4_mqH0",
+          "short_id": "854c259df41e3148"
+        }
+      }
+    },
+    {
+      "type": "selector",
+      "tag": "select",
+      "outbounds": [
+        "auto",
+        "🇨🇿 捷克 (Czech) 01 - xiaohe",
+        "🇨🇿 捷克 (Czech) 02 - xiaohe",
+        "🇨🇿 捷克 (Czech) 03 - xiaohe"
+      ]
+    },
+    {
+      "type": "urltest",
+      "tag": "auto",
+      "outbounds": [
+        "🇨🇿 捷克 (Czech) 01 - xiaohe",
+        "🇨🇿 捷克 (Czech) 02 - xiaohe",
+        "🇨🇿 捷克 (Czech) 03 - xiaohe"
+      ],
+      "url": "https://www.gstatic.com/generate_204"
+    },
+    {
+      "type": "direct",
+      "tag": "direct"
+    },
+    {
+      "type": "block",
+      "tag": "block"
+    }
+  ]
+}

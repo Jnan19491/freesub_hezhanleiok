@@ -5,7 +5,7 @@ mode: rule
 log-level: info
 proxies:
 - name: 🇲🇾 马来西亚 (Malaysia) 01 - xiaohe
-  server: mszz.mangshe.xyz
+  server: msjp.mangshe.xyz
   port: 20563
   udp: true
   type: hysteria2
