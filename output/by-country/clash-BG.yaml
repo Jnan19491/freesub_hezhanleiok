@@ -22,22 +22,42 @@ proxies:
   tls: true
   servername: neth9.lunariai.ru
   skip-cert-verify: false
-  client-fingerprint: qq
+  client-fingerprint: edge
 - name: 🇧🇬 保加利亚 (Bulgaria) 03 - xiaohe
-  server: 213.183.63.60
-  port: 9049
-  udp: true
-  type: ss
-  cipher: aes-256-cfb
-  password: PRBf4BS2HvJqtWxY
-- name: 🇧🇬 保加利亚 (Bulgaria) 04 - xiaohe
   server: 213.183.63.60
   port: 9054
   udp: true
   type: ss
   cipher: aes-256-cfb
   password: VcFuyXvND2yQWSFY
+- name: 🇧🇬 保加利亚 (Bulgaria) 04 - xiaohe
+  server: 46.8.113.65
+  port: 443
+  udp: true
+  type: vless
+  uuid: f6b58665-c524-4c60-a939-d8f27123e079
+  tls: true
+  servername: b.cz-1.bnc-gt.co.uk
+  skip-cert-verify: false
+  client-fingerprint: qq
+  network: grpc
+  grpc-opts:
+    grpc-service-name: grpc
 - name: 🇧🇬 保加利亚 (Bulgaria) 05 - xiaohe
+  server: 213.183.63.60
+  port: 9049
+  udp: true
+  type: ss
+  cipher: aes-256-cfb
+  password: PRBf4BS2HvJqtWxY
+- name: 🇧🇬 保加利亚 (Bulgaria) 06 - xiaohe
+  server: 213.183.63.60
+  port: 9098
+  udp: true
+  type: ss
+  cipher: aes-256-cfb
+  password: aLpQtfEZe445QyHk
+- name: 🇧🇬 保加利亚 (Bulgaria) 07 - xiaohe
   server: 193.148.59.178
   port: 443
   udp: true
@@ -50,20 +70,16 @@ proxies:
     short-id: e3daad69
   servername: www.apple.com
   client-fingerprint: chrome
-- name: 🇧🇬 保加利亚 (Bulgaria) 06 - xiaohe
+- name: 🇧🇬 保加利亚 (Bulgaria) 08 - xiaohe
   server: 131.123.39.29
-  port: 443
+  port: 8081
   udp: true
   type: vless
   uuid: 54ee5e59-55a3-4599-83ff-0c67b3f411b2
-  flow: xtls-rprx-vision
-  tls: true
-  reality-opts:
-    public-key: pX9uknHGLC9I26TT5kq4bIAljtX2AGWLK23EMgn6xFo
-    short-id: 84be686ea1d16478
-  servername: sheetpeek.com
-  client-fingerprint: chrome
-- name: 🇧🇬 保加利亚 (Bulgaria) 07 - xiaohe
+  network: ws
+  ws-opts:
+    path: /vless-test
+- name: 🇧🇬 保加利亚 (Bulgaria) 09 - xiaohe
   server: 144.31.50.236
   port: 443
   udp: true
@@ -75,7 +91,16 @@ proxies:
     public-key: uitO4Z8t9TplwwYaqwLqh5rfxDh_X8bOBiNuPbzvaEM
     short-id: bbe46bd8f6b96839
   servername: yandex.ru
-  client-fingerprint: randomized
+  client-fingerprint: firefox
+- name: 🇧🇬 保加利亚 (Bulgaria) 10 - xiaohe
+  server: 131.123.41.18
+  port: 8081
+  udp: true
+  type: vless
+  uuid: 54ee5e59-55a3-4599-83ff-0c67b3f411b2
+  network: ws
+  ws-opts:
+    path: /vless-test
 proxy-groups:
 - name: PROXIES
   type: select
@@ -88,6 +113,9 @@ proxy-groups:
   - 🇧🇬 保加利亚 (Bulgaria) 05 - xiaohe
   - 🇧🇬 保加利亚 (Bulgaria) 06 - xiaohe
   - 🇧🇬 保加利亚 (Bulgaria) 07 - xiaohe
+  - 🇧🇬 保加利亚 (Bulgaria) 08 - xiaohe
+  - 🇧🇬 保加利亚 (Bulgaria) 09 - xiaohe
+  - 🇧🇬 保加利亚 (Bulgaria) 10 - xiaohe
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
@@ -100,5 +128,8 @@ proxy-groups:
   - 🇧🇬 保加利亚 (Bulgaria) 05 - xiaohe
   - 🇧🇬 保加利亚 (Bulgaria) 06 - xiaohe
   - 🇧🇬 保加利亚 (Bulgaria) 07 - xiaohe
+  - 🇧🇬 保加利亚 (Bulgaria) 08 - xiaohe
+  - 🇧🇬 保加利亚 (Bulgaria) 09 - xiaohe
+  - 🇧🇬 保加利亚 (Bulgaria) 10 - xiaohe
 rules:
 - MATCH,PROXIES
