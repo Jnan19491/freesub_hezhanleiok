@@ -6,41 +6,33 @@
     {
       "type": "vless",
       "tag": "🇮🇪 爱尔兰 (Ireland) 01 - xiaohe",
-      "server": "3.9.135.156",
-      "server_port": 51847,
-      "uuid": "391a01e9-b664-407b-9158-610fab3f5920",
+      "server": "50.7.5.164",
+      "server_port": 443,
+      "uuid": "cd3bb7d9-7df3-4644-ac05-c260990ac277",
       "flow": "xtls-rprx-vision",
       "tls": {
         "enabled": true,
-        "server_name": "www.tesla.com",
+        "server_name": "ekb.eg",
+        "insecure": true,
+        "alpn": [
+          "h2"
+        ],
         "utls": {
           "enabled": true,
-          "fingerprint": "chrome"
-        },
-        "reality": {
-          "enabled": true,
-          "public_key": "S6noV0L8eNASnTe1gXLutLZNdfENsvKMsOJiGQYi6nc",
-          "short_id": "0eec442e7b34d2f2"
+          "fingerprint": "firefox"
         }
       }
     },
     {
-      "type": "vless",
+      "type": "trojan",
       "tag": "🇮🇪 爱尔兰 (Ireland) 02 - xiaohe",
-      "server": "104.21.82.226",
+      "server": "ie.tronsg.com",
       "server_port": 443,
-      "uuid": "36a857e4-f3d4-43aa-8b90-d7da849da989",
+      "password": "Trojan@82164024",
       "tls": {
         "enabled": true,
-        "server_name": "002.inc-electrocell-001-002.workers.dev",
+        "server_name": "ie.tronsg.com",
         "insecure": false
-      },
-      "transport": {
-        "type": "ws",
-        "path": "/eyJqdW5rIjoib0RnakxTZUZvOSIsInByb3RvY29sIjoidmwiLCJtb2RlIjoicHJveHlpcCIsInBhbmVsSVBzIjpbXX0=",
-        "headers": {
-          "Host": "002.inc-electrocell-001-002.workers.dev"
-        }
       }
     },
     {

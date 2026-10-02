@@ -6,46 +6,22 @@
     {
       "type": "vless",
       "tag": "🇮🇶 IQ 01 - xiaohe",
-      "server": "104.18.34.21",
-      "server_port": 8443,
-      "uuid": "656bb400-3b7a-47e3-94b0-0362f3865072",
-      "tls": {
-        "enabled": true,
-        "server_name": "socks5.revil-time3.workers.dev",
-        "insecure": false,
-        "utls": {
-          "enabled": true,
-          "fingerprint": "chrome"
-        }
-      },
-      "transport": {
-        "type": "ws",
-        "path": "/socks5://128.140.46.169:13482",
-        "headers": {
-          "Host": "socks5.revil-time3.workers.dev"
-        }
-      }
-    },
-    {
-      "type": "vless",
-      "tag": "🇮🇶 IQ 02 - xiaohe",
-      "server": "104.21.94.230",
+      "server": "188.114.97.6",
       "server_port": 443,
-      "uuid": "de78c0b1-c5c8-412a-bd92-430d1f2e2642",
+      "uuid": "07821f66-cdb7-4c70-9de6-e230cffac470",
       "tls": {
         "enabled": true,
-        "server_name": "frosty-pond-7436.shhabbyat914.workers.dev",
+        "server_name": "wgrcqwtkfyqujs43.ghydgdbdbddvv.workers.dev",
         "insecure": false,
-        "utls": {
-          "enabled": true,
-          "fingerprint": "chrome"
-        }
+        "alpn": [
+          "http/1.1"
+        ]
       },
       "transport": {
         "type": "ws",
-        "path": "/NmrU9ImDG7jA7oFEem",
+        "path": "/vl/Li1khIHH3DNItJyzraemsPBQvu",
         "headers": {
-          "Host": "frosty-pond-7436.shhabbyat914.workers.dev"
+          "Host": "wgrcqwtkfyqujs43.ghydgdbdbddvv.workers.dev"
         }
       }
     },
@@ -54,16 +30,14 @@
       "tag": "select",
       "outbounds": [
         "auto",
-        "🇮🇶 IQ 01 - xiaohe",
-        "🇮🇶 IQ 02 - xiaohe"
+        "🇮🇶 IQ 01 - xiaohe"
       ]
     },
     {
       "type": "urltest",
       "tag": "auto",
       "outbounds": [
-        "🇮🇶 IQ 01 - xiaohe",
-        "🇮🇶 IQ 02 - xiaohe"
+        "🇮🇶 IQ 01 - xiaohe"
       ],
       "url": "https://www.gstatic.com/generate_204"
     },

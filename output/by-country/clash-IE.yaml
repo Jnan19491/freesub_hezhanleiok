@@ -5,32 +5,24 @@ mode: rule
 log-level: info
 proxies:
 - name: 🇮🇪 爱尔兰 (Ireland) 01 - xiaohe
-  server: 3.9.135.156
-  port: 51847
-  udp: true
-  type: vless
-  uuid: 391a01e9-b664-407b-9158-610fab3f5920
-  flow: xtls-rprx-vision
-  tls: true
-  reality-opts:
-    public-key: S6noV0L8eNASnTe1gXLutLZNdfENsvKMsOJiGQYi6nc
-    short-id: 0eec442e7b34d2f2
-  servername: www.tesla.com
-  client-fingerprint: chrome
-- name: 🇮🇪 爱尔兰 (Ireland) 02 - xiaohe
-  server: 104.21.82.226
+  server: 50.7.5.164
   port: 443
   udp: true
   type: vless
-  uuid: 36a857e4-f3d4-43aa-8b90-d7da849da989
+  uuid: cd3bb7d9-7df3-4644-ac05-c260990ac277
+  flow: xtls-rprx-vision
   tls: true
-  servername: 002.inc-electrocell-001-002.workers.dev
+  servername: ekb.eg
+  skip-cert-verify: true
+  client-fingerprint: firefox
+- name: 🇮🇪 爱尔兰 (Ireland) 02 - xiaohe
+  server: ie.tronsg.com
+  port: 443
+  udp: true
+  type: trojan
+  password: Trojan@82164024
+  sni: ie.tronsg.com
   skip-cert-verify: false
-  network: ws
-  ws-opts:
-    path: /eyJqdW5rIjoib0RnakxTZUZvOSIsInByb3RvY29sIjoidmwiLCJtb2RlIjoicHJveHlpcCIsInBhbmVsSVBzIjpbXX0=
-    headers:
-      Host: 002.inc-electrocell-001-002.workers.dev
 proxy-groups:
 - name: PROXIES
   type: select
